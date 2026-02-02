@@ -1,0 +1,12 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(npm init -y)",
+			"Bash(volta run npx:*)",
+			"Bash(git -C /Users/s045097/Documents/Private/mau-almuni-200x show:*)",
+			"Bash(npm run build:*)",
+			"Bash(npm run lint:*)",
+			"Bash(npm run lint:fix:*)"
+		]
+	}
+}

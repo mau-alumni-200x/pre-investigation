@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Content from "../components/Content.astro";
+import CTAButton from "../components/CTAButton.astro";
+
+// アンケートURL（後から指定）
+const surveyUrl = "https://forms.gle/PLACEHOLDER";
+---
+
+<Layout>
+  <Header />
+  <main>
+    <Hero />
+    <Content />
+    <CTAButton href={surveyUrl} />
+  </main>
+</Layout>

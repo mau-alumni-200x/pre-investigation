@@ -1,0 +1,61 @@
+---
+// Header component - Fixed top bar
+---
+
+<header class="header">
+  <div class="header__inner">
+    <span class="header__text header__text--left">TO ALL OUR FELLOW ALUMNI</span>
+    <span class="header__logo">n</span>
+    <span class="header__text header__text--right">AN INVITATION</span>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--color-header-bg);
+    height: var(--header-height);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--spacing-sm);
+  }
+
+  .header__text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: calc(10 * var(--fluid-unit));
+    color: var(--color-white);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 641px) {
+    .header__text {
+      font-size: 10px;
+    }
+  }
+
+  .header__logo {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: calc(18 * var(--fluid-unit));
+    color: var(--color-white);
+  }
+
+  @media (min-width: 641px) {
+    .header__logo {
+      font-size: 18px;
+    }
+  }
+</style>

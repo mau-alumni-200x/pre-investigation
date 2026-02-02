@@ -1,0 +1,180 @@
+---
+// Content section - Main text area with event details
+---
+
+<section class="content">
+  <div class="content__inner">
+    <!-- Section Title -->
+    <header class="content__header">
+      <h1 class="content__title">ALUMNI ASSOCIATION</h1>
+      <p class="content__subtitle">Musashino Art University</p>
+    </header>
+
+    <!-- Main Text -->
+    <div class="content__body">
+      <p>
+        拝啓　時下ますますご清祥のこととお慶び申し上げます。
+      </p>
+      <p>
+        さて、このたび武蔵野美術大学200X年度卒業生の同窓会を開催する運びとなりました。
+        卒業以来、それぞれの道を歩んでこられた皆様と再会し、
+        学生時代の思い出を語り合い、近況を報告し合える貴重な機会になればと考えております。
+      </p>
+      <p>
+        つきましては、下記の通り開催を予定しておりますので、
+        ご多忙中とは存じますが、万障お繰り合わせの上、
+        ぜひご参加くださいますようお願い申し上げます。
+      </p>
+      <p class="content__closing">敬具</p>
+    </div>
+
+    <!-- Event Details Box -->
+    <div class="content__event-box">
+      <h2 class="content__event-title">開催概要</h2>
+      <dl class="content__event-list">
+        <div class="content__event-item">
+          <dt>日時</dt>
+          <dd>202X年XX月XX日（土）18:00〜21:00</dd>
+        </div>
+        <div class="content__event-item">
+          <dt>会場</dt>
+          <dd>未定（都内を予定）</dd>
+        </div>
+        <div class="content__event-item">
+          <dt>会費</dt>
+          <dd>未定（5,000円〜8,000円程度を予定）</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Signature -->
+    <footer class="content__footer">
+      <p class="content__signature">
+        武蔵野美術大学 200X年度卒業生<br />
+        同窓会実行委員会
+      </p>
+    </footer>
+  </div>
+</section>
+
+<style>
+  .content {
+    background-color: var(--color-bg);
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .content__inner {
+    max-width: var(--max-width);
+    margin-inline: auto;
+  }
+
+  .content__header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .content__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: calc(14 * var(--fluid-unit));
+    letter-spacing: 0.2em;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  @media (min-width: 641px) {
+    .content__title {
+      font-size: 16px;
+    }
+  }
+
+  .content__subtitle {
+    font-family: var(--font-script);
+    font-size: calc(28 * var(--fluid-unit));
+    color: var(--color-text);
+  }
+
+  @media (min-width: 641px) {
+    .content__subtitle {
+      font-size: 32px;
+    }
+  }
+
+  .content__body {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .content__body p {
+    margin-bottom: 1em;
+    text-align: justify;
+    text-indent: 1em;
+  }
+
+  .content__closing {
+    text-align: right;
+    text-indent: 0 !important;
+    margin-top: var(--spacing-md);
+  }
+
+  .content__event-box {
+    border: 1px solid var(--color-text);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .content__event-title {
+    font-size: calc(14 * var(--fluid-unit));
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: 641px) {
+    .content__event-title {
+      font-size: 16px;
+    }
+  }
+
+  .content__event-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .content__event-item {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+
+  .content__event-item dt {
+    flex-shrink: 0;
+    width: calc(48 * var(--fluid-unit));
+    font-weight: 400;
+  }
+
+  @media (min-width: 641px) {
+    .content__event-item dt {
+      width: 60px;
+    }
+  }
+
+  .content__event-item dd {
+    flex: 1;
+  }
+
+  .content__footer {
+    text-align: right;
+  }
+
+  .content__signature {
+    font-size: calc(14 * var(--fluid-unit));
+    line-height: 1.6;
+  }
+
+  @media (min-width: 641px) {
+    .content__signature {
+      font-size: 14px;
+    }
+  }
+</style>
