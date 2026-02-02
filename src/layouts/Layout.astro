@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const { title = "ムサビ同窓会 | 武蔵野美術大学 200X年度卒業生" } = Astro.props;
 ---
 
@@ -24,7 +26,3 @@ const { title = "ムサビ同窓会 | 武蔵野美術大学 200X年度卒業生"
     <slot />
   </body>
 </html>
-
-<style is:global>
-  @import "../styles/global.css";
-</style>

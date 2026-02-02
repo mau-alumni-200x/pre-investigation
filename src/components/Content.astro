@@ -1,57 +1,66 @@
 ---
 // Content section - Main text area with event details
+
+import { asset } from '../utils/paths.js'
 ---
 
 <section class="content">
-  <div class="content__inner">
-    <!-- Section Title -->
-    <header class="content__header">
-      <h1 class="content__title">ALUMNI ASSOCIATION</h1>
-      <p class="content__subtitle">Musashino Art University</p>
-    </header>
-
-    <!-- Main Text -->
-    <div class="content__body">
-      <p>
-        拝啓　時下ますますご清祥のこととお慶び申し上げます。
-      </p>
-      <p>
-        さて、このたび武蔵野美術大学200X年度卒業生の同窓会を開催する運びとなりました。
-        卒業以来、それぞれの道を歩んでこられた皆様と再会し、
-        学生時代の思い出を語り合い、近況を報告し合える貴重な機会になればと考えております。
-      </p>
-      <p>
-        つきましては、下記の通り開催を予定しておりますので、
-        ご多忙中とは存じますが、万障お繰り合わせの上、
-        ぜひご参加くださいますようお願い申し上げます。
-      </p>
-      <p class="content__closing">敬具</p>
-    </div>
+  <img src={asset('assets/imgs/tagline.svg')} alt="">
+  <h2>武蔵野美術大学<br />2006年卒業生のみなさん</h2>  <!-- Main Text -->
+  <p>
+    2026年11月。<br />
+    卒業後20周年を迎える節目の年に、<wbr />同期生が<wbr />一堂に会する初の同窓会を<wbr />開催いたします。<br />
+    <br />
+    まだ計画段階ではありますが、<wbr />当日は学科の垣根を越えて、<wbr />できるだけ多くの方々と楽しい<wbr />ひとときを過ごしたいと<wbr />考えています。<br />
+    また、同期生だけでなく、<wbr />大学時代をともに過ごした<wbr />親しい先輩・後輩の<wbr />みなさんもお誘いする<wbr />予定です。<br />
+    <br />
+    日時と会場を決めるにあたり、<wbr />まずは参加希望者の<wbr />大まかな人数を確認させて<wbr />いただきたく、<wbr />事前アンケートを<wbr />ご用意しました。<br />
+    <br />
+    ご多用のところ<wbr />恐れ入りますが、<wbr />以下のリンク<wbr />（Google Forms）<wbr />から2月28日(土)まで<wbr />にご回答いただけますと幸いです。<br />
+  </p>
 
     <!-- Event Details Box -->
-    <div class="content__event-box">
-      <h2 class="content__event-title">開催概要</h2>
-      <dl class="content__event-list">
-        <div class="content__event-item">
-          <dt>日時</dt>
-          <dd>202X年XX月XX日（土）18:00〜21:00</dd>
+     <div class="content__event-wrapper">
+       <div class="content__event-box">
+         <h2 class="content__event-title">開催概要</h2>
+         <dl class="content__event-list">
+            <div class="content__event-item">
+              <dt>時期</dt>
+              <dd>2026年11月の土日</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>時間</dt>
+              <dd>お昼から夕方までの2〜3時間</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>場所</dt>
+              <dd>東京都内</dd>
+            </div>
+            <div class="content__event-item">
+              <dt>備考</dt>
+              <dd>参加希望者のみなさんには、日時・会場・会費を決定のうえ、4月にあらためて出欠確認のご案内をさせていただきます。</dd>
+            </div>
+          </dl>
+          ＊連絡先をのご存じの同級生・先輩・後輩がいらっしゃいましたら、ぜひこのサイトを共有していただけると嬉しいです。
         </div>
-        <div class="content__event-item">
-          <dt>会場</dt>
-          <dd>未定（都内を予定）</dd>
-        </div>
-        <div class="content__event-item">
-          <dt>会費</dt>
-          <dd>未定（5,000円〜8,000円程度を予定）</dd>
-        </div>
-      </dl>
-    </div>
+      </div>
+
+  <p>
+    みなさんの回答を<wbr />心よりお待ちしております。
+  </p>
+
+  <div class="asterisks">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+  </div>
 
     <!-- Signature -->
     <footer class="content__footer">
       <p class="content__signature">
-        武蔵野美術大学 200X年度卒業生<br />
-        同窓会実行委員会
+        同窓会有志<br />
+        武蔵野美術大学 2006年度卒業生<br />
+        鹿島大策　石原麻衣
       </p>
     </footer>
   </div>
@@ -60,73 +69,38 @@
 <style>
   .content {
     background-color: var(--color-bg);
-    padding: var(--spacing-xl) var(--spacing-sm);
-  }
-
-  .content__inner {
-    max-width: var(--max-width);
-    margin-inline: auto;
-  }
-
-  .content__header {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .content__title {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: calc(14 * var(--fluid-unit));
-    letter-spacing: 0.2em;
-    color: var(--color-text);
-    margin-bottom: var(--spacing-xs);
-  }
-
-  @media (min-width: 641px) {
-    .content__title {
-      font-size: 16px;
+    padding: var(--spacing-32) var(--spacing-24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+    & h2 {
+      text-align: center;
     }
+    & p {
+      word-break: keep-all;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.75;
+      padding: var(--spacing-24)
+    } 
   }
 
-  .content__subtitle {
-    font-family: var(--font-script);
-    font-size: calc(28 * var(--fluid-unit));
-    color: var(--color-text);
+  .content__event-wrapper {
+    background-color: white;
+    padding: var(--spacing-16);
   }
-
-  @media (min-width: 641px) {
-    .content__subtitle {
-      font-size: 32px;
-    }
-  }
-
-  .content__body {
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .content__body p {
-    margin-bottom: 1em;
-    text-align: justify;
-    text-indent: 1em;
-  }
-
-  .content__closing {
-    text-align: right;
-    text-indent: 0 !important;
-    margin-top: var(--spacing-md);
-  }
-
   .content__event-box {
-    border: 1px solid var(--color-text);
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    background-color: white;
+    border: 0.05rem solid var(--color-accent);
+    padding: var(--spacing-24);
   }
 
   .content__event-title {
-    font-size: calc(14 * var(--fluid-unit));
-    font-weight: 400;
+    font-size: calc(20 * var(--fluid-unit));
+    font-weight: 900;
     text-align: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-16);
     letter-spacing: 0.1em;
   }
 
@@ -139,18 +113,19 @@
   .content__event-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-12);
+    margin-bottom: var(--spacing-24);
   }
 
   .content__event-item {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-8);
   }
 
   .content__event-item dt {
     flex-shrink: 0;
     width: calc(48 * var(--fluid-unit));
-    font-weight: 400;
+    font-weight: 900;
   }
 
   @media (min-width: 641px) {
@@ -168,7 +143,7 @@
   }
 
   .content__signature {
-    font-size: calc(14 * var(--fluid-unit));
+    font-size: calc(16 * var(--fluid-unit))!important;
     line-height: 1.6;
   }
 
@@ -177,4 +152,14 @@
       font-size: 14px;
     }
   }
+
+.asterisks {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-32);
+  & img {
+    width: 1.5rem;
+  }
+}
+
 </style>

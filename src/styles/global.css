@@ -8,7 +8,7 @@
 :root {
 	/* Colors */
 	--color-bg: #f5f0e8;
-	--color-accent: #c75050;
+	--color-accent: #cd0303;
 	--color-text: #333;
 	--color-header-bg: #3a3a3a;
 	--color-white: #fff;
@@ -19,14 +19,16 @@
 	--font-script: "Pinyon Script", cursive;
 
 	/* Fluid typography base (390px viewport) */
-	--fluid-unit: calc(1px * 100vw / 390);
+	--fluid-unit: calc(100vw / 390);
 
 	/* Spacing */
-	--spacing-xs: calc(8 * var(--fluid-unit));
-	--spacing-sm: calc(16 * var(--fluid-unit));
-	--spacing-md: calc(24 * var(--fluid-unit));
-	--spacing-lg: calc(32 * var(--fluid-unit));
-	--spacing-xl: calc(48 * var(--fluid-unit));
+	--spacing-8: calc(8 * var(--fluid-unit));
+	--spacing-12: calc(12 * var(--fluid-unit));
+	--spacing-16: calc(16 * var(--fluid-unit));
+	--spacing-20: calc(20 * var(--fluid-unit));
+	--spacing-24: calc(24 * var(--fluid-unit));
+	--spacing-32: calc(32 * var(--fluid-unit));
+	--spacing-48: calc(48 * var(--fluid-unit));
 
 	/* Layout */
 	--max-width: 640px;

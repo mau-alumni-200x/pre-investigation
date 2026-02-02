@@ -1,125 +1,43 @@
 ---
 // Hero section - Full viewport with monogram and vertical text
+
+import { asset } from '../utils/paths.js'
 ---
 
 <section class="hero">
-  <div class="hero__inner">
-    <!-- MA Monogram Logo -->
-    <div class="hero__logo">
-      <img src="/logo.svg" alt="MA モノグラム" width="200" height="200" />
-    </div>
-
-    <!-- Vertical Japanese Text -->
-    <div class="hero__text vertical-text">
-      <span class="hero__title">ムサビ同窓会</span>
-    </div>
-
-    <!-- Star Decorations -->
-    <div class="hero__stars">
-      <span class="hero__star hero__star--1">*</span>
-      <span class="hero__star hero__star--2">*</span>
-      <span class="hero__star hero__star--3">*</span>
-    </div>
+  <img class="logo" src={asset('assets/imgs/logo.svg')} alt="">
+  <img class="title" src={asset('assets/imgs/title.svg')} alt="">
+  <div class="asterisks">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
+    <img src={asset('assets/imgs/asterisk.svg')} alt="">
   </div>
 </section>
 
 <style>
-  .hero {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: var(--header-height);
-    background-color: var(--color-bg);
-    position: relative;
-    overflow: hidden;
-  }
+.hero {
+  margin:2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:2rem;
+}
 
-  .hero__inner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: var(--max-width);
-    padding: var(--spacing-lg);
-  }
+.logo {
+  width: 12rem;
+}
 
-  .hero__logo {
-    width: calc(200 * var(--fluid-unit));
-    height: calc(200 * var(--fluid-unit));
-  }
+.title {
+  width: 1.5rem;
+}
 
-  @media (min-width: 641px) {
-    .hero__logo {
-      width: 280px;
-      height: 280px;
-    }
+.asterisks {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-32);
+  & img {
+    width: 1.5rem;
   }
-
-  .hero__logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .hero__text {
-    position: absolute;
-    right: var(--spacing-lg);
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .hero__title {
-    font-family: var(--font-body);
-    font-size: calc(18 * var(--fluid-unit));
-    letter-spacing: 0.3em;
-    color: var(--color-text);
-  }
-
-  @media (min-width: 641px) {
-    .hero__title {
-      font-size: 20px;
-    }
-  }
-
-  .hero__stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-  }
-
-  .hero__star {
-    position: absolute;
-    font-family: var(--font-display);
-    font-size: calc(24 * var(--fluid-unit));
-    color: var(--color-text);
-    opacity: 0.6;
-  }
-
-  @media (min-width: 641px) {
-    .hero__star {
-      font-size: 24px;
-    }
-  }
-
-  .hero__star--1 {
-    top: 20%;
-    left: 15%;
-  }
-
-  .hero__star--2 {
-    top: 70%;
-    left: 10%;
-  }
-
-  .hero__star--3 {
-    bottom: 25%;
-    right: 20%;
-  }
+}
 </style>
