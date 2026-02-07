@@ -69,7 +69,22 @@ html {
 body {
 	font-family: var(--font-body);
 	color: var(--color-text);
-	background-color: var(--color-bg);
+	/* background-color: var(--color-bg); */
+	/* background: repeating-conic-gradient(#000 0 0.0001%,#0000 0 0.0002%); */
+	/* 1. 最小の高さを確保（コンテンツが少なくても全体に広げる） */
+	min-height: 100vh;
+	margin: 0;
+
+	/* 2. 背景の設定 */
+	background-color: #e8e4d9; /* ベースの色 */
+	/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 12 12'%3E%3Crect width='1' height='1' fill='%23000' opacity='0.03'/%3E%3Crect x='3' y='1' width='2' height='2' fill='%23000' opacity='0.02'/%3E%3Crect x='8' y='2' width='1' height='1' fill='%23fff' opacity='0.2'/%3E%3Crect x='1' y='5' width='2' height='1' fill='%23000' opacity='0.03'/%3E%3Crect x='6' y='7' width='2' height='2' fill='%23000' opacity='0.05'/%3E%3Crect x='10' y='9' width='1' height='2' fill='%23fff' opacity='0.1'/%3E%3C/svg%3E"); */
+	background-image:url("/pre-investigation/assets/imgs/bg.png");
+	background-size: 32px 32px; /* ここでピクセルパターンの密度を決定 */
+	background-repeat: repeat;
+
+	/* 3. 戦略的な選択：スクロールに追従させる（推奨） */
+	background-attachment: scroll;
+
 	line-height: 1.8;
 	min-height: 100vh;
 	-webkit-font-smoothing: antialiased;
